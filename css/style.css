@@ -239,12 +239,21 @@ a:focus{
 }
 
 
-.team__social__item:hover {
+.team__social__item:hover .team__social__icon {
+    fill: var(--white);
+}
+
+.team__social__item:hover{
     background-color: var(--blue);
 }
 
+
 .team__social__item:focus {
     background-color: var(--blue);
+}
+
+.team__social__item:focus .team__social__icon {
+    fill: var(--white);
 }
 
 .team__social__icon {
@@ -317,16 +326,20 @@ a:focus{
     margin-bottom: 94px;
 }
 
-.regular__customers__item:hover {
+.regular__customers__section li:hover  {
     border: 3px solid var(--blue);
-    fill: var(--blue);
-    stroke: var(--blue);
 }
 
-.regular__customers__item:focus {
-    border: 3px solid var(--blue);
+.regular__customers__item:hover .icon__regular__customers {
     fill: var(--blue);
-    stroke: var(--blue);
+}
+
+.regular__customers__section li:focus  {
+    border: 3px solid var(--blue);
+}
+
+.regular__customers__item:focus .icon__regular__customers {
+    fill: var(--blue);
 }
 
 .icon__regular__customers {
