@@ -18,10 +18,10 @@
 <nav>  
         <ul class="first_list_header">
             <li>
-                <a href="index.html"><span class="second__list">Studio</span></a>
+                <a href="index.html">Studio</a>
             </li>
             <li>
-              <a href="portofolio.html">Portofolio</a>
+              <a href="portofolio.html"><span class="second__list">Portofolio</span></a>
             </li>
             <li>
                 <a href="#Contacts">Contacts</a>
@@ -55,6 +55,9 @@
                     <img src="./images/technoduck.jpg" alt="Images with Sara Grant, Luke Jacobs, Claire Olson " width="294"/>
                     <p class="cards__title"><b>Technoduch</b></p>
                     <p class="cards__subtitle">Web-site</p>
+                <div class="overlay">
+                    <p>Technoduck is a state-of-the-art coronavirus distribution platform. Companies use this platform for digital espionage and attacks on competitors' secure servers.</p>
+                </div>
                 </div>
     
                 <!--Container 2-->
@@ -147,5 +150,14 @@
                         <li class="footer__social__item"><a href=""><svg class="footer__social__icon"><use href="./images/icons.svg#icon-linkedin" width="20" height="20"/></svg></a></li>
                 </div>
                 </footer>
+
+                <div data-modal class="is-hidden">
+                    <div data-modal-content>
+                        <h2>Titlu modal</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis?</p>
+                        <button data-modal-close type="button">X</button>
+                    </div>
+                </div>
+        <script src="./modal.js"></script>
 </body>
 </html>
