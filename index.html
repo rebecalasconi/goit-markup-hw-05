@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>goit-markup-hw-04</goit-markup-hw-03></title>
+    <title>goit-markup-hw-06</goit-markup-hw-03></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,7 @@
     <nav>  
             <ul class="first_list_header">
                 <li>
-                    <a href="index.html"><span class="second__list">Studio</span></a>
+                    <a href="index.html" class><span class="second__list active active">Studio</span></a>
                 </li>
                 <li>
                   <a href="portofolio.html">Portofolio</a>
@@ -201,9 +201,31 @@
  
                 <div data-modal class="is-hidden">
                     <div data-modal-content>
-                        <h2>Titlu modal</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, quis?</p>
                         <button data-modal-close type="button">&times;</button>
+                        <h2 class="modal-title"><b>Leave your information and we'll call you back</b></h2>
+                        <form class="modal-form">
+                         <label class="modal-form__position"
+                         >Name
+                        <input type="text" name="username" class="modal-form__input"/>
+                         </label>
+                         <label class="modal-form__position">
+                         Telefon 
+                         <input type="tel" name="userphone" class="modal-form__input"/>
+                         </label>
+                         <label class="modal-form__position">
+                         E-mail 
+                         <input type="email" name="useremail" class="modal-form__input"/>
+                         </label>
+                         <label class="modal-form__position">
+                         Mesaj 
+                         <textarea name="mesaj" placeholder="Introdu mesajul tau" class="modal-form__comments" rows="5"></textarea>
+                         </label>
+                         <label class="modal-form__position modal-form__checked form-checked">
+                        <input type="checkbox" type="agree" value="agree" class="modal-form__input"/>
+                        I agree with the letter and accept the <a href="" class="conditions">Terms and Condititons</a> 
+                         </label>
+                         <button type="submit" class="modal-form__btn">Send</button>
+                         </form>
                     </div>
                 </div>
         <script src="./modal.js"></script>
