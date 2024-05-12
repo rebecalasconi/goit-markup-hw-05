@@ -726,6 +726,55 @@ a:focus{
     line-height: 14px;
     letter-spacing: 0.01em;
     color: var(--modal-color);
+    position: relative;
+}
+
+.modal-form__position svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 26px;
+    left: 7px;
+}
+
+.modal-form__input[type="checkbox"] {
+    display: none;
+}
+
+.modal-form__input[type="checkbox"]:checked + .replace-checkbox {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.modal-checkbox__position svg {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    top: -2px;
+    left: -2px;
+    display: none;
+    fill: var(--white);
+}
+
+.modal-form__input[type="checkbox"]:checked + .modal-checkbox__position svg{
+    display: block;
+}
+
+.modal-checkbox__position {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--black);
+    border-radius: 2px;
+}
+
+.modal-form__position input:focus + svg,
+.modal-form__position input:hover + svg {        
+    fill: var(--blue);
+}
+
+.modal-form__position input {
+    padding-left: 30px;
 }
 
 .modal-form__input {
@@ -749,8 +798,14 @@ a:focus{
     padding-top: 5px;
 }
 
+.modal-form__input:hover,
+.modal-form__comments:hover,
+.modal-form__input:focus,
+.modal-form__comments:focus {
+    border-color: var(--blue);
+}
+
 .modal-form__checked {
-    display: flex;
     flex-direction: row;
     align-items: center;
     font-size: 14px;
@@ -762,8 +817,10 @@ a:focus{
     justify-content: center;
 }
 
-.condition {
+.conditions {
     color: var(--blue);
+    text-decoration: underline;
+    margin-left: -5px;
 }
 
 .modal-form__btn {
@@ -776,6 +833,10 @@ a:focus{
     cursor: pointer;
     color: var(--white);
     font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
     border-radius: 4px;
     margin: 0 auto;
 }
