@@ -409,20 +409,21 @@ a:focus{
     margin-bottom: 94px;
 }
 
-.regular__customers__section li:hover  {
+.regular__customers__section li:hover,
+.regular__customers__section li:focus   {
     border: 3px solid var(--blue);
 }
 
-.regular__customers__item:hover .icon__regular__customers {
-    fill: var(--blue);
-}
-
-.regular__customers__section li:focus  {
-    border: 3px solid var(--blue);
-}
-
+.regular__customers__item:hover .icon__regular__customers,
 .regular__customers__item:focus .icon__regular__customers {
     fill: var(--blue);
+}
+
+.regular__customers__section li,
+.regular__customers__item .icon__regular__customers {
+    transition-property: border, fill;
+    transition-duration: 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon__regular__customers {
@@ -457,8 +458,8 @@ a:focus{
     font-size: 26px;
     color: var(--white);
     transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #footer__logo:hover {
@@ -477,8 +478,8 @@ a:focus{
     color: var(--gray);
     font-style: normal;
     transition-property: color;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer__address a:hover {
@@ -543,6 +544,7 @@ a:focus{
 .footer-form__input {
     width: 358px;
     height: 50px;
+    cursor: pointer;
     outline: none;
     background-color: var(--darkgray);
     border: 1px solid var(--gray);
@@ -559,11 +561,16 @@ a:focus{
     fill: var(--white);
     transition-property: fill;
     transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-form:hover svg,
-.footer-form:focus svg {
+.footer-form__btn:hover svg,
+.footer-form__btn:focus svg {
     fill: var(--blue);
+}
+
+.footer-form__input:hover {
+    border: 1px solid var(--blue);
 }
 
 .footer-form__btn {
@@ -576,10 +583,12 @@ a:focus{
     letter-spacing: 0.06em;
     color: var(--white);
     line-height: 30px;
+    cursor: pointer;
     border: 1px solid var(--gray);
     border-radius: 4px;
     transition-property: color, background-color, transform;
     transition-duration: 250ms, 250ms, 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form__btn:focus,
@@ -618,14 +627,16 @@ a:focus{
     margin-bottom: 50px;
     border-radius: 4px;
     font-family: inherit;
+    cursor: pointer;
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .selection>button:hover {
     background-color: var(--blue);
     color: var(--white);
-    border: none;
     box-shadow: 2px 2px 2px var(--gray);
-    cursor: pointer;
   }
 
 .selection>button:focus {
@@ -656,8 +667,8 @@ a:focus{
     position: relative;
     overflow: hidden;
     transition-property: -webkit-box-shadow;
-   transition-duration: 250ms;
-   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay {
@@ -826,7 +837,7 @@ a:focus{
     position: relative;
     width: 10px;
     height: 10px;
-    border: 1px solid var(--black);
+    border: 1.5px solid var(--black);
     border-radius: 2px;
 }
 
@@ -837,6 +848,9 @@ a:focus{
 
 .modal-form__position input {
     padding-left: 30px;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form__input {
@@ -847,6 +861,9 @@ a:focus{
     cursor: pointer;   
     border: 1px solid var(--modal-border);
     padding-left: 12px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form__comments {
@@ -858,6 +875,9 @@ a:focus{
     border: 1px solid var(--modal-border);
     padding-left: 12px;
     padding-top: 5px;
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form__input:hover,
