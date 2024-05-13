@@ -526,6 +526,68 @@ a:focus{
     height: 44px;
 }
 
+.footer-form__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: var(--white);
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.footer-form {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-form__input {
+    width: 358px;
+    height: 50px;
+    outline: none;
+    background-color: var(--darkgray);
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    padding-left: 16px;
+    color: var(--white);
+}
+
+.footer-form__svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 25px;
+    vertical-align: middle;
+    fill: var(--white);
+    transition-property: fill;
+    transition-duration: 250ms;
+}
+
+.footer-form:hover svg,
+.footer-form:focus svg {
+    fill: var(--blue);
+}
+
+.footer-form__btn {
+    font-family: inherit;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: var(--blue);
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    color: var(--white);
+    line-height: 30px;
+    border: 1px solid var(--gray);
+    border-radius: 4px;
+    transition-property: color, background-color, transform;
+    transition-duration: 250ms, 250ms, 250ms;
+}
+
+.footer-form__btn:focus,
+.footer-form__btn:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    transform: scale(1.1);
+}
 
 /* Second page styling */
 .second__list {
